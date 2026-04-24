@@ -22,7 +22,7 @@
 - 🎂 **Born:** October 06, 2005
 - 🎓 **Status:** 3rd Year Student (Semester 2)
 - 💻 **Focus:** Web Development & .NET Framework
-- 📫 **Reach me:** [trng1006@users.noreply.github.com](mailto:trng1006@users.noreply.github.com)
+- 📫 **Reach me:** [trng1006.work@gmail.com](mailto:trng1006.work@gmail.com)
 
 ---
 
