@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tranbaonguyen-portfolio/static/css/main.c700ec3e.css",
+    "main.css": "/tranbaonguyen-portfolio/static/css/main.1ec4e170.css",
     "main.js": "/tranbaonguyen-portfolio/static/js/main.af378df7.js",
     "static/css/64.323ffc8a.chunk.css": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css",
     "static/js/64.bf1fc2ed.chunk.js": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/resume.pdf": "/tranbaonguyen-portfolio/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/tranbaonguyen-portfolio/index.html",
     "static/media/talksCardBack.svg": "/tranbaonguyen-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.c700ec3e.css.map": "/tranbaonguyen-portfolio/static/css/main.c700ec3e.css.map",
+    "main.1ec4e170.css.map": "/tranbaonguyen-portfolio/static/css/main.1ec4e170.css.map",
     "main.af378df7.js.map": "/tranbaonguyen-portfolio/static/js/main.af378df7.js.map",
     "64.323ffc8a.chunk.css.map": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css.map",
     "64.bf1fc2ed.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js.map",
@@ -25,7 +25,7 @@
     "769.f34b8f1c.chunk.js.map": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c700ec3e.css",
+    "static/css/main.1ec4e170.css",
     "static/js/main.af378df7.js"
   ]
 }
