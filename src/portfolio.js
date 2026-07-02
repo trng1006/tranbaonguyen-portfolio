@@ -18,8 +18,8 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Trần Bảo Nguyên",
-  title: "Hi all, I'm Nguyên",
+  username: "Tran Bao Nguyen",
+  title: "Hi all, I'm Nguyen",
   subTitle: emoji(
     "A third-year Software Engineering student with a solid foundation in Object-Oriented Programming, Database Management, and Web/Mobile development. Experienced in designing and building complete systems from Database and Backend to Frontend."
   ),
