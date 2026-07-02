@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/tranbaonguyen-portfolio/static/css/main.e23ac70c.css",
-    "main.js": "/tranbaonguyen-portfolio/static/js/main.617de17a.js",
+    "main.css": "/tranbaonguyen-portfolio/static/css/main.c700ec3e.css",
+    "main.js": "/tranbaonguyen-portfolio/static/js/main.af378df7.js",
     "static/css/64.323ffc8a.chunk.css": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css",
-    "static/js/64.ca5c77a2.chunk.js": "/tranbaonguyen-portfolio/static/js/64.ca5c77a2.chunk.js",
+    "static/js/64.bf1fc2ed.chunk.js": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css",
     "static/js/769.f34b8f1c.chunk.js": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/tranbaonguyen-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
@@ -17,15 +17,15 @@
     "static/media/resume.pdf": "/tranbaonguyen-portfolio/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/tranbaonguyen-portfolio/index.html",
     "static/media/talksCardBack.svg": "/tranbaonguyen-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.e23ac70c.css.map": "/tranbaonguyen-portfolio/static/css/main.e23ac70c.css.map",
-    "main.617de17a.js.map": "/tranbaonguyen-portfolio/static/js/main.617de17a.js.map",
+    "main.c700ec3e.css.map": "/tranbaonguyen-portfolio/static/css/main.c700ec3e.css.map",
+    "main.af378df7.js.map": "/tranbaonguyen-portfolio/static/js/main.af378df7.js.map",
     "64.323ffc8a.chunk.css.map": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css.map",
-    "64.ca5c77a2.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.ca5c77a2.chunk.js.map",
+    "64.bf1fc2ed.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css.map",
     "769.f34b8f1c.chunk.js.map": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e23ac70c.css",
-    "static/js/main.617de17a.js"
+    "static/css/main.c700ec3e.css",
+    "static/js/main.af378df7.js"
   ]
 }
