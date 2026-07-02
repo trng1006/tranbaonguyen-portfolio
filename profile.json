@@ -1,0 +1,87 @@
+{
+  "data": {
+    "user": {
+      "name": "Trần Bảo Nguyên",
+      "bio": "Software Engineer Intern",
+      "avatarUrl": "https://avatars.githubusercontent.com/trng1006",
+      "location": "Ho Chi Minh City, Vietnam",
+      "pinnedItems": {
+        "totalCount": 6,
+        "edges": [
+          {
+            "node": {
+              "name": "DemoNotification",
+              "description": "A C++ based notification application.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/DemoNotification",
+              "id": "1",
+              "diskUsage": 100,
+              "primaryLanguage": { "name": "C++", "color": "#f34b7d" }
+            }
+          },
+          {
+            "node": {
+              "name": "CloStore",
+              "description": "A comprehensive e-commerce system featuring advanced search, cart management, online payments, and secure user authentication.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 1 },
+              "url": "https://github.com/trng1006",
+              "id": "2",
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "Java", "color": "#b07219" }
+            }
+          },
+          {
+            "node": {
+              "name": "Study-Group-Registration",
+              "description": "A mobile application assisting students and lecturers in optimizing the process of finding group members.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006",
+              "id": "3",
+              "diskUsage": 512,
+              "primaryLanguage": { "name": "Python", "color": "#3572A5" }
+            }
+          },
+          {
+            "node": {
+              "name": "DoAn_TH_Deeplearning",
+              "description": "Practical applications of deep learning models and algorithms.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/DoAn_TH_Deeplearning",
+              "id": "4",
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "Jupyter Notebook", "color": "#DA5B0B" }
+            }
+          },
+          {
+            "node": {
+              "name": "transfer_learning",
+              "description": "Exploration of transfer learning techniques and model fine-tuning.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/transfer_learning",
+              "id": "5",
+              "diskUsage": 2048,
+              "primaryLanguage": { "name": "Jupyter Notebook", "color": "#DA5B0B" }
+            }
+          },
+          {
+            "node": {
+              "name": "tranbaonguyen-portfolio",
+              "description": "My personal software engineering portfolio.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/tranbaonguyen-portfolio",
+              "id": "6",
+              "diskUsage": 5000,
+              "primaryLanguage": { "name": "JavaScript", "color": "#f1e05a" }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
