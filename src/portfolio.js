@@ -21,7 +21,7 @@ const greeting = {
   username: "Trần Bảo Nguyên",
   title: "Hi all, I'm Nguyên",
   subTitle: emoji(
-    "A passionate Software Engineer 🚀 building robust applications across web, mobile, and desktop platforms. Currently specializing in .NET Core and Advanced Web Architecture."
+    "A third-year Software Engineering student with a solid foundation in Object-Oriented Programming, Database Management, and Web/Mobile development. Experienced in designing and building complete systems from Database and Backend to Frontend."
   ),
   resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -30,26 +30,26 @@ const greeting = {
 // Social Media Links
 const socialMediaLinks = {
   github: "https://github.com/trng1006",
-  gmail: "trng1006.work@gmail.com",
+  gmail: "Trng1006.work@gmail.com",
   display: true // Set true to display this section, defaults to false
 };
 
 // Skills Section
 const skillsSection = {
   title: "What I do",
-  subTitle: "SOFTWARE ENGINEER EXPERORING EVERY TECH STACK",
+  subTitle: "SOFTWARE ENGINEER FOCUSING ON BACKEND & FULLSTACK DEVELOPMENT",
   skills: [
-    emoji("⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"),
-    emoji("⚡ Building scalable backend systems using .NET Core and modern architectures"),
-    emoji("⚡ Exploring Machine Learning and Deep Learning models for practical applications")
+    emoji("⚡ Develop scalable RESTful APIs using Spring Boot (Java) and FastAPI (Python)"),
+    emoji("⚡ Build responsive Front end and Mobile applications with React, Vue, and Flutter"),
+    emoji("⚡ Database design, optimization, and management (PostgreSQL, MySQL, SQL Server, Oracle)")
   ],
   softwareSkills: [
-    { skillName: "C#", fontAwesomeClassname: "fab fa-microsoft" },
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
     { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
+    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "C#", fontAwesomeClassname: "fab fa-microsoft" },
     { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
     { skillName: "React", fontAwesomeClassname: "fab fa-react" },
-    { skillName: "NodeJS", fontAwesomeClassname: "fab fa-node" },
+    { skillName: "Vue", fontAwesomeClassname: "fab fa-vuejs" },
     { skillName: "SQL Database", fontAwesomeClassname: "fas fa-database" },
     { skillName: "HTML5", fontAwesomeClassname: "fab fa-html5" },
     { skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt" }
@@ -62,14 +62,14 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "University",
+      schoolName: "Ho Chi Minh City University of Food Industry (HUIT)",
       logo: require("./assets/images/harvardLogo.png"), // Default image placeholder
-      subHeader: "Computer Science and Software Engineering",
-      duration: "2023 - Present (Class of 2005)",
-      desc: "3rd Year Student (Semester 2). Focusing on fundamental and advanced software engineering concepts.",
+      subHeader: "Major: Software Engineering",
+      duration: "09/2023 - 12/2027 (Expected)",
+      desc: "GPA: 3.1/4.0 (Good).",
       descBullets: [
-        "Specializing in .NET Core and Web Architecture",
-        "Exploring mobile app development with Flutter"
+        "Focusing on Object-Oriented Programming, Database Management, and Web/Mobile development",
+        "Looking for a Backend/Fullstack Internship opportunity to apply knowledge to real-world products"
       ]
     }
   ]
@@ -79,17 +79,39 @@ const educationInfo = {
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
-    { Stack: "Backend (.NET)", progressPercentage: "85%" },
-    { Stack: "Frontend (React/JS)", progressPercentage: "80%" },
-    { Stack: "Mobile (Flutter)", progressPercentage: "70%" }
+    { Stack: "Backend (Java/Python)", progressPercentage: "85%" },
+    { Stack: "Frontend (React/Vue)", progressPercentage: "75%" },
+    { Stack: "Mobile (Flutter)", progressPercentage: "70%" },
+    { Stack: "Database Management", progressPercentage: "80%" }
   ],
   displayCodersrank: false 
 };
 
 // Work experience section
 const workExperiences = {
-  display: false, // Hidden for now as user is student
-  experience: []
+  display: true, 
+  experience: [
+    {
+      role: "Freelance Tutor",
+      company: "Private Tutoring",
+      companylogo: require("./assets/images/contactMail.webp"),
+      date: "Past",
+      desc: "Demonstrated the ability to break down complex problems into simple, logical steps for students. Highly patient in troubleshooting and finding solutions to difficult concepts.",
+      descBullets: [
+        "Successfully balanced tutoring schedules, university coursework, and self-taught programming hours."
+      ]
+    },
+    {
+      role: "F&B Service Staff",
+      company: "Restaurant & Cafe",
+      companylogo: require("./assets/images/contactMail.webp"),
+      date: "Past",
+      desc: "Trained to stay calm, prioritize tasks efficiently, and handle continuous customer requests during peak hours.",
+      descBullets: [
+        "Coordinated seamlessly with cashiers and kitchen staff to optimize service speed."
+      ]
+    }
+  ]
 };
 
 // Open Source Section (GitHub Pinned Repos)
@@ -149,8 +171,8 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "",
-  email_address: "trng1006.work@gmail.com"
+  number: "0369340700",
+  email_address: "Trng1006.work@gmail.com"
 };
 
 // Twitter Section
