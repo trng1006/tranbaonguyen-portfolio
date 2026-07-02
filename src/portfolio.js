@@ -63,7 +63,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Ho Chi Minh City University of Food Industry (HUIT)",
-      logo: require("./assets/images/harvardLogo.png"), // Default image placeholder
+      logo: require("./assets/images/huit_logo.jpg"), // Default image placeholder
       subHeader: "Major: Software Engineering",
       duration: "09/2023 - 12/2027 (Expected)",
       desc: "GPA: 3.1/4.0 (Good).",
