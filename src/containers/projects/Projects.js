@@ -4,6 +4,9 @@ import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
@@ -48,16 +51,42 @@ export default function Projects() {
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
-              if (!v) {
-                console.error(
-                  `Github Object for repository number : ${i} is undefined`
+            <Slider
+              dots={false}
+              infinite={true}
+              speed={500}
+              slidesToShow={3}
+              slidesToScroll={1}
+              autoplay={true}
+              autoplaySpeed={2000}
+              responsive={[
+                {
+                  breakpoint: 1380,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+              ]}
+            >
+              {repo.map((v, i) => {
+                if (!v) {
+                  console.error(
+                    `Github Object for repository number : ${i} is undefined`
+                  );
+                }
+                return (
+                  <div key={v.node.id} className="slick-slide-wrapper">
+                    <GithubRepoCard repo={v} isDark={isDark} />
+                  </div>
                 );
-              }
-              return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
-              );
-            })}
+              })}
+            </Slider>
           </div>
           <Button
             text={"More Projects"}
