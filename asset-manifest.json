@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tranbaonguyen-portfolio/static/css/main.1ec4e170.css",
-    "main.js": "/tranbaonguyen-portfolio/static/js/main.af378df7.js",
+    "main.css": "/tranbaonguyen-portfolio/static/css/main.7170c7d3.css",
+    "main.js": "/tranbaonguyen-portfolio/static/js/main.b5d17494.js",
     "static/css/64.323ffc8a.chunk.css": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css",
     "static/js/64.bf1fc2ed.chunk.js": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css",
@@ -16,16 +16,20 @@
     "static/media/skill.svg": "/tranbaonguyen-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "static/media/resume.pdf": "/tranbaonguyen-portfolio/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/tranbaonguyen-portfolio/index.html",
+    "static/media/slick.svg": "/tranbaonguyen-portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/tranbaonguyen-portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/tranbaonguyen-portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/tranbaonguyen-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "static/media/talksCardBack.svg": "/tranbaonguyen-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.1ec4e170.css.map": "/tranbaonguyen-portfolio/static/css/main.1ec4e170.css.map",
-    "main.af378df7.js.map": "/tranbaonguyen-portfolio/static/js/main.af378df7.js.map",
+    "main.7170c7d3.css.map": "/tranbaonguyen-portfolio/static/css/main.7170c7d3.css.map",
+    "main.b5d17494.js.map": "/tranbaonguyen-portfolio/static/js/main.b5d17494.js.map",
     "64.323ffc8a.chunk.css.map": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css.map",
     "64.bf1fc2ed.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css.map",
     "769.f34b8f1c.chunk.js.map": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ec4e170.css",
-    "static/js/main.af378df7.js"
+    "static/css/main.7170c7d3.css",
+    "static/js/main.b5d17494.js"
   ]
 }
