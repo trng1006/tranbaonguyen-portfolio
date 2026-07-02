@@ -10,13 +10,28 @@
 }
 
 .repo-cards-div-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.repo-cards-div-main::-webkit-scrollbar {
+  height: 8px;
+}
+.repo-cards-div-main::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 4px;
+}
+.repo-cards-div-main::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
 .repo-cards-div-main > div {
-  height: 100%;
+  flex: 0 0 400px;
+  scroll-snap-align: start;
+  height: auto;
 }
 
 /* Media Query */
@@ -30,7 +45,7 @@
     font-size: 30px;
     text-align: center;
   }
-  .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .repo-cards-div-main > div {
+    flex: 0 0 300px;
   }
 }
