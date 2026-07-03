@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tranbaonguyen-portfolio/static/css/main.7170c7d3.css",
-    "main.js": "/tranbaonguyen-portfolio/static/js/main.c310ced3.js",
+    "main.css": "/tranbaonguyen-portfolio/static/css/main.be80f0bd.css",
+    "main.js": "/tranbaonguyen-portfolio/static/js/main.f9ce4db7.js",
     "static/css/64.323ffc8a.chunk.css": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css",
     "static/js/64.bf1fc2ed.chunk.js": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css",
@@ -21,15 +21,15 @@
     "static/media/slick.ttf": "/tranbaonguyen-portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/tranbaonguyen-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "static/media/talksCardBack.svg": "/tranbaonguyen-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.7170c7d3.css.map": "/tranbaonguyen-portfolio/static/css/main.7170c7d3.css.map",
-    "main.c310ced3.js.map": "/tranbaonguyen-portfolio/static/js/main.c310ced3.js.map",
+    "main.be80f0bd.css.map": "/tranbaonguyen-portfolio/static/css/main.be80f0bd.css.map",
+    "main.f9ce4db7.js.map": "/tranbaonguyen-portfolio/static/js/main.f9ce4db7.js.map",
     "64.323ffc8a.chunk.css.map": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css.map",
     "64.bf1fc2ed.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css.map",
     "769.f34b8f1c.chunk.js.map": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7170c7d3.css",
-    "static/js/main.c310ced3.js"
+    "static/css/main.be80f0bd.css",
+    "static/js/main.f9ce4db7.js"
   ]
 }
