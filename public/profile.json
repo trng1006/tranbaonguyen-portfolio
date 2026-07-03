@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/trng1006",
       "location": "Ho Chi Minh City, Vietnam",
       "pinnedItems": {
-        "totalCount": 5,
+        "totalCount": 6,
         "edges": [
           {
             "node": {
@@ -66,6 +66,18 @@
               "id": "5",
               "diskUsage": 2048,
               "primaryLanguage": { "name": "Jupyter Notebook", "color": "#DA5B0B" }
+            }
+          },
+          {
+            "node": {
+              "name": "learnenglishforme",
+              "description": "An application to help users learn English effectively.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/learnenglishforme",
+              "id": "6",
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "JavaScript", "color": "#f1e05a" }
             }
           }
         ]
