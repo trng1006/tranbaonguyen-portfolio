@@ -30,29 +30,67 @@ if (USE_GITHUB_DATA === "true") {
     bio
     avatarUrl
     location
-    pinnedItems(first: 6, types: [REPOSITORY]) {
-      totalCount
-      edges {
-          node {
-            ... on Repository {
-              name
-              description
-              forkCount
-              stargazers {
-                totalCount
-              }
-              url
-              id
-              diskUsage
-              primaryLanguage {
-                name
-                color
-              }
-            }
-          }
-        }
+    repo1: repository(name: "learnenglishforme") {
+      name
+      description
+      forkCount
+      stargazers {
+        totalCount
+      }
+      url
+      id
+      diskUsage
+      primaryLanguage {
+        name
+        color
       }
     }
+    repo2: repository(name: "LTDD_DoAn") {
+      name
+      description
+      forkCount
+      stargazers {
+        totalCount
+      }
+      url
+      id
+      diskUsage
+      primaryLanguage {
+        name
+        color
+      }
+    }
+    repo3: repository(name: "CloStore") {
+      name
+      description
+      forkCount
+      stargazers {
+        totalCount
+      }
+      url
+      id
+      diskUsage
+      primaryLanguage {
+        name
+        color
+      }
+    }
+    repo4: repository(name: "ApiChatBox") {
+      name
+      description
+      forkCount
+      stargazers {
+        totalCount
+      }
+      url
+      id
+      diskUsage
+      primaryLanguage {
+        name
+        color
+      }
+    }
+  }
 }
 `
   });
@@ -68,7 +106,7 @@ if (USE_GITHUB_DATA === "true") {
   };
 
   const req = https.request(default_options, res => {
-    let data = "";
+    let responseData = "";
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
@@ -76,10 +114,29 @@ if (USE_GITHUB_DATA === "true") {
     }
 
     res.on("data", d => {
-      data += d;
+      responseData += d;
     });
     res.on("end", () => {
-      fs.writeFile("./public/profile.json", data, function (err) {
+      let parsed = JSON.parse(responseData);
+      if (parsed.data && parsed.data.user) {
+        let user = parsed.data.user;
+        let edges = [];
+        if (user.repo1) edges.push({ node: user.repo1 });
+        if (user.repo2) edges.push({ node: user.repo2 });
+        if (user.repo3) edges.push({ node: user.repo3 });
+        if (user.repo4) edges.push({ node: user.repo4 });
+        
+        delete user.repo1;
+        delete user.repo2;
+        delete user.repo3;
+        delete user.repo4;
+        
+        user.pinnedItems = {
+          totalCount: edges.length,
+          edges: edges
+        };
+      }
+      fs.writeFile("./public/profile.json", JSON.stringify(parsed), function (err) {
         if (err) return console.log(err);
         console.log("saved file to public/profile.json");
       });
