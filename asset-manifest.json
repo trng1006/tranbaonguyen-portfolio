@@ -1,35 +1,16 @@
 {
   "files": {
-    "main.css": "/tranbaonguyen-portfolio/static/css/main.be80f0bd.css",
-    "main.js": "/tranbaonguyen-portfolio/static/js/main.f9ce4db7.js",
-    "static/css/64.323ffc8a.chunk.css": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css",
-    "static/js/64.bf1fc2ed.chunk.js": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js",
-    "static/css/769.b3cbb36b.chunk.css": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css",
-    "static/js/769.f34b8f1c.chunk.js": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js",
-    "static/media/Montserrat-Regular.ttf": "/tranbaonguyen-portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
-    "static/media/Agustina.woff": "/tranbaonguyen-portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
-    "static/media/contactMail.webp": "/tranbaonguyen-portfolio/static/media/contactMail.298a597edb8258fc13e5.webp",
-    "static/media/manOnTable.svg": "/tranbaonguyen-portfolio/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "main.css": "/tranbaonguyen-portfolio/static/css/main.8df6e1d6.css",
+    "main.js": "/tranbaonguyen-portfolio/static/js/main.c3d063ce.js",
     "static/media/huit_logo.jpg": "/tranbaonguyen-portfolio/static/media/huit_logo.952311ed37b86db56ad0.jpg",
-    "static/media/contactMailDark.svg": "/tranbaonguyen-portfolio/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
-    "static/media/developerActivity.svg": "/tranbaonguyen-portfolio/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/skill.svg": "/tranbaonguyen-portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
-    "static/media/resume.pdf": "/tranbaonguyen-portfolio/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/tranbaonguyen-portfolio/index.html",
-    "static/media/slick.svg": "/tranbaonguyen-portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/tranbaonguyen-portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/tranbaonguyen-portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/tranbaonguyen-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "static/media/talksCardBack.svg": "/tranbaonguyen-portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.be80f0bd.css.map": "/tranbaonguyen-portfolio/static/css/main.be80f0bd.css.map",
-    "main.f9ce4db7.js.map": "/tranbaonguyen-portfolio/static/js/main.f9ce4db7.js.map",
-    "64.323ffc8a.chunk.css.map": "/tranbaonguyen-portfolio/static/css/64.323ffc8a.chunk.css.map",
-    "64.bf1fc2ed.chunk.js.map": "/tranbaonguyen-portfolio/static/js/64.bf1fc2ed.chunk.js.map",
-    "769.b3cbb36b.chunk.css.map": "/tranbaonguyen-portfolio/static/css/769.b3cbb36b.chunk.css.map",
-    "769.f34b8f1c.chunk.js.map": "/tranbaonguyen-portfolio/static/js/769.f34b8f1c.chunk.js.map"
+    "main.8df6e1d6.css.map": "/tranbaonguyen-portfolio/static/css/main.8df6e1d6.css.map",
+    "main.c3d063ce.js.map": "/tranbaonguyen-portfolio/static/js/main.c3d063ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.be80f0bd.css",
-    "static/js/main.f9ce4db7.js"
+    "static/css/main.8df6e1d6.css",
+    "static/js/main.c3d063ce.js"
   ]
 }

@@ -6,18 +6,30 @@
       "avatarUrl": "https://avatars.githubusercontent.com/trng1006",
       "location": "Ho Chi Minh City, Vietnam",
       "pinnedItems": {
-        "totalCount": 5,
+        "totalCount": 4,
         "edges": [
           {
             "node": {
-              "name": "DemoNotification",
-              "description": "A C++ based notification application.",
+              "name": "LearnEnglishForMe",
+              "description": "An application to help users learn English effectively.",
               "forkCount": 0,
               "stargazers": { "totalCount": 0 },
-              "url": "https://github.com/trng1006/DemoNotification",
+              "url": "https://github.com/trng1006/LearnEnglishForMe",
               "id": "1",
-              "diskUsage": 100,
-              "primaryLanguage": { "name": "C++", "color": "#f34b7d" }
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "JavaScript", "color": "#f1e05a" }
+            }
+          },
+          {
+            "node": {
+              "name": "LTDD_DoAn",
+              "description": "Mobile Application Project.",
+              "forkCount": 0,
+              "stargazers": { "totalCount": 0 },
+              "url": "https://github.com/trng1006/LTDD_DoAn",
+              "id": "2",
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "Dart", "color": "#00B4AB" }
             }
           },
           {
@@ -26,46 +38,22 @@
               "description": "A comprehensive e-commerce system featuring advanced search, cart management, online payments, and secure user authentication.",
               "forkCount": 0,
               "stargazers": { "totalCount": 1 },
-              "url": "https://github.com/trng1006",
-              "id": "2",
-              "diskUsage": 1024,
-              "primaryLanguage": { "name": "Java", "color": "#b07219" }
-            }
-          },
-          {
-            "node": {
-              "name": "Study-Group-Registration",
-              "description": "A mobile application assisting students and lecturers in optimizing the process of finding group members.",
-              "forkCount": 0,
-              "stargazers": { "totalCount": 0 },
-              "url": "https://github.com/trng1006",
+              "url": "https://github.com/trng1006/CloStore",
               "id": "3",
-              "diskUsage": 512,
-              "primaryLanguage": { "name": "Python", "color": "#3572A5" }
+              "diskUsage": 1024,
+              "primaryLanguage": { "name": "HTML", "color": "#e34c26" }
             }
           },
           {
             "node": {
-              "name": "DoAn_TH_Deeplearning",
-              "description": "Practical applications of deep learning models and algorithms.",
+              "name": "ApiChatBox",
+              "description": "API backend for chatbox application.",
               "forkCount": 0,
               "stargazers": { "totalCount": 0 },
-              "url": "https://github.com/trng1006/DoAn_TH_Deeplearning",
+              "url": "https://github.com/trng1006/ApiChatBox",
               "id": "4",
               "diskUsage": 1024,
-              "primaryLanguage": { "name": "Jupyter Notebook", "color": "#DA5B0B" }
-            }
-          },
-          {
-            "node": {
-              "name": "transfer_learning",
-              "description": "Exploration of transfer learning techniques and model fine-tuning.",
-              "forkCount": 0,
-              "stargazers": { "totalCount": 0 },
-              "url": "https://github.com/trng1006/transfer_learning",
-              "id": "5",
-              "diskUsage": 2048,
-              "primaryLanguage": { "name": "Jupyter Notebook", "color": "#DA5B0B" }
+              "primaryLanguage": { "name": "JavaScript", "color": "#f1e05a" }
             }
           }
         ]
