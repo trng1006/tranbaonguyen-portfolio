@@ -1,31 +1,61 @@
-@import "../../_globalColor";
+.stack-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
 
-.dev-icons {
-  padding-left: 0;
+.stack-group-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stack-group-card__title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.stack-group-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
 }
 
-.software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.84375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: border-color 160ms var(--ease-out),
+    background-color 160ms var(--ease-out);
 }
 
-.software-skill-inline > i {
-  color: $subTitle;
+.stack-pill i {
+  font-size: 0.95rem;
+  color: var(--accent);
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
+.stack-pill:hover {
+  border-color: var(--accent-border);
+  background-color: var(--accent-soft);
 }
-.software-skill-inline > p {
-  color: $subTitle;
-  font-size: 10px;
-}
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+
+@media (max-width: 900px) {
+  .stack-groups-grid {
+    grid-template-columns: 1fr;
+  }
 }

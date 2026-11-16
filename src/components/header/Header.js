@@ -1,93 +1,95 @@
-import React, {useContext} from "react";
-import Headroom from "react-headroom";
+import React, {useState} from "react";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
   workExperiences,
   skillsSection,
   openSource,
-  blogSection,
-  talkSection,
-  achievementSection,
-  resumeSection
+  educationInfo
 } from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewSkills = skillsSection.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
-  const viewResume = resumeSection.display;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navItems = [
+    skillsSection.display && {label: "Stack", href: "#skills"},
+    openSource.display && {label: "Projects", href: "#opensource"},
+    educationInfo.display && {label: "Education", href: "#education"},
+    workExperiences.display && {label: "Experience", href: "#experience"},
+    {label: "Contact", href: "#contact"}
+  ].filter(Boolean);
 
   return (
-    <Headroom>
-      <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
-          <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{greeting.username}</span>
-          <span className="grey-color">/&gt;</span>
+    <header className="site-header">
+      <div className="site-header__inner">
+        <a href="#greeting" className="site-header__logo">
+          <span className="site-header__logo-bracket">&lt;</span>
+          <span className="site-header__logo-name">{greeting.username}</span>
+          <span className="site-header__logo-bracket">/&gt;</span>
         </a>
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
-        >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
-        </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
-          {viewResume && (
-            <li>
-              <a href="#resume">Resume</a>
-            </li>
-          )}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
-      </header>
-    </Headroom>
+
+        <div className="site-header__right">
+          <nav
+            className={`site-header__nav ${menuOpen ? "is-open" : ""}`}
+            aria-label="Primary navigation"
+          >
+            <ul>
+              {navItems.map(item => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="site-header__actions">
+            <ToggleSwitch />
+            <button
+              type="button"
+              className="site-header__menu-btn"
+              onClick={() => setMenuOpen(prev => !prev)}
+              aria-expanded={menuOpen}
+              aria-label="Toggle navigation menu"
+            >
+              {menuOpen ? (
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
+
 export default Header;

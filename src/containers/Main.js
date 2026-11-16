@@ -22,10 +22,17 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-  const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
-    useState(true);
+  const darkPref =
+    typeof window !== "undefined" && window.matchMedia
+      ? window.matchMedia("(prefers-color-scheme: dark)")
+      : null;
+  const [isDark, setIsDark] = useLocalStorage(
+    "isDark",
+    Boolean(darkPref && darkPref.matches)
+  );
+  const [isShowingSplashAnimation, setIsShowingSplashAnimation] = useState(
+    Boolean(splashScreen.enabled)
+  );
 
   useEffect(() => {
     if (splashScreen.enabled) {
@@ -44,26 +51,29 @@ const Main = () => {
   };
 
   return (
-    <div className={isDark ? "dark-mode" : null}>
+    <div className={isDark ? "app-shell dark-mode" : "app-shell"}>
+      <div className="ambient-backdrop" aria-hidden="true"></div>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
         ) : (
           <>
             <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
+            <main className="portfolio-main">
+              <Greeting />
+              <Skills />
+              <StackProgress />
+              <Projects />
+              <Education />
+              <WorkExperience />
+              <StartupProject />
+              <Achievement />
+              <Blogs />
+              <Talks />
+              <Twitter />
+              <Podcast />
+              <Profile />
+            </main>
             <Footer />
             <ScrollToTopButton />
           </>

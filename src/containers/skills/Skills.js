@@ -1,68 +1,94 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
-import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/codingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-import StyleContext from "../../contexts/StyleContext";
+import {skillsSection} from "../../portfolio";
+
+function CapabilityIcon({id}) {
+  if (id === "backend") {
+    return (
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="2" y="3" width="20" height="7" rx="2" />
+        <rect x="2" y="14" width="20" height="7" rx="2" />
+        <line x1="6" y1="6.5" x2="6.01" y2="6.5" />
+        <line x1="6" y1="17.5" x2="6.01" y2="17.5" />
+      </svg>
+    );
+  }
+  if (id === "frontend") {
+    return (
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="3" y="4" width="18" height="14" rx="2" />
+        <path d="M8 20h8M12 18v2" />
+      </svg>
+    );
+  }
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <ellipse cx="12" cy="5" rx="8" ry="3" />
+      <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+      <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+    </svg>
+  );
+}
 
 export default function Skills() {
-  const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
     return null;
   }
+
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
-      <div className="skills-main-div">
-        <Fade left duration={1000}>
-          <div className="skills-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
-            ) : (
-              <img
-                alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
-              ></img>
-            )}
-          </div>
-        </Fade>
-        <Fade right duration={1000}>
-          <div className="skills-text-div">
-            <h1
-              className={isDark ? "dark-mode skills-heading" : "skills-heading"}
-            >
-              {skillsSection.title}{" "}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text-subtitle"
-                  : "subTitle skills-text-subtitle"
-              }
-            >
-              {skillsSection.subTitle}
-            </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
-            </div>
-          </div>
-        </Fade>
+    <section className="section-block" id="skills">
+      <div className="section-header">
+        <span className="section-eyebrow">01 / Stack &amp; Capabilities</span>
+        <h2 className="section-title">{skillsSection.title}</h2>
+        <p className="section-subtitle">{skillsSection.subTitle}</p>
       </div>
-    </div>
+
+      {skillsSection.capabilities && skillsSection.capabilities.length > 0 && (
+        <div className="capabilities-grid">
+          {skillsSection.capabilities.map(item => (
+            <article key={item.id} className="bento-card capability-card">
+              <div className="capability-card__icon">
+                <CapabilityIcon id={item.id} />
+              </div>
+              <h3 className="capability-card__title">{item.title}</h3>
+              <p className="capability-card__desc">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      )}
+
+      <SoftwareSkill />
+    </section>
   );
 }

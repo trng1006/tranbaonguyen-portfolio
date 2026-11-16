@@ -1,64 +1,45 @@
-@import "../../_globalColor";
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
 
-.skills-main-div {
+.capability-card {
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.skills-text-div {
-  margin-left: 50px;
+.capability-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
 }
 
-.skills-main-div > * {
-  flex: 1;
-  margin-bottom: 30px;
+.capability-card__title {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
 }
 
-.skills-image-div > img {
-  max-width: 100%;
-  height: auto;
+.capability-card__desc {
+  margin: 0;
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-.skills-heading {
-  font-size: 56px;
-  font-weight: 400;
-}
-.subTitle {
-  color: $subTitle;
-}
-
-/* Media Query */
-@media (max-width: 1380px) {
-  .skills-heading {
-    font-size: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .skills-heading {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-  }
-  .skills-main-div {
-    flex-direction: column;
-  }
-  .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
-  }
-  .skills-text {
-    font-size: 16px;
-  }
-  .skills-text-subtitle {
-    font-size: 16px;
-    text-align: center;
-  }
-  .skills-image-div {
-    /* display: none; */
-    order: 2;
+@media (max-width: 900px) {
+  .capabilities-grid {
+    grid-template-columns: 1fr;
   }
 }

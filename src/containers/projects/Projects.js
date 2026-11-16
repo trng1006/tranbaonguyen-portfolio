@@ -1,103 +1,79 @@
-import React, {useState, useEffect, useContext, Suspense, lazy} from "react";
+import React, {useState, useEffect} from "react";
 import "./Project.scss";
 import Button from "../../components/button/Button";
+import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
 import {openSource, socialMediaLinks} from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
-import Loading from "../../containers/loading/Loading";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 export default function Projects() {
-  const GithubRepoCard = lazy(() =>
-    import("../../components/githubRepoCard/GithubRepoCard")
-  );
-  const FailedLoading = () => null;
-  const renderLoader = () => <Loading />;
-  const [repo, setrepo] = useState([]);
-  // todo: remove useContex because is not supported
-  const {isDark} = useContext(StyleContext);
+  const [repo, setRepo] = useState([]);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    const getRepoData = () => {
-      fetch("./profile.json")
-        .then(result => {
-          if (result.ok) {
-            return result.json();
-          }
-          throw result;
-        })
-        .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
-        })
-        .catch(function (error) {
-          console.error(
-            `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
-          );
-          setrepoFunction("Error");
-        });
+    let isMounted = true;
+    if (typeof fetch !== "function") {
+      setHasError(true);
+      return () => {
+        isMounted = false;
+      };
+    }
+
+    fetch("./profile.json")
+      .then(result => {
+        if (result.ok) {
+          return result.json();
+        }
+        throw new Error(`HTTP ${result.status}`);
+      })
+      .then(response => {
+        if (isMounted && response?.data?.user?.pinnedItems?.edges) {
+          setRepo(response.data.user.pinnedItems.edges);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setHasError(true);
+        }
+      });
+
+    return () => {
+      isMounted = false;
     };
-    getRepoData();
   }, []);
 
-  function setrepoFunction(array) {
-    setrepo(array);
+  if (!openSource.display || hasError || !Array.isArray(repo) || repo.length === 0) {
+    return null;
   }
-  if (
-    !(typeof repo === "string" || repo instanceof String) &&
-    openSource.display
-  ) {
-    return (
-      <Suspense fallback={renderLoader()}>
-        <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
-          <div className="repo-cards-div-main">
-            <Slider
-              dots={false}
-              infinite={true}
-              speed={500}
-              slidesToShow={3}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={2000}
-              responsive={[
-                {
-                  breakpoint: 1380,
-                  settings: {
-                    slidesToShow: 2,
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 1,
-                  }
-                }
-              ]}
-            >
-              {repo.map((v, i) => {
-                if (!v) {
-                  console.error(
-                    `Github Object for repository number : ${i} is undefined`
-                  );
-                }
-                return (
-                  <div key={v.node.id} className="slick-slide-wrapper">
-                    <GithubRepoCard repo={v} isDark={isDark} />
-                  </div>
-                );
-              })}
-            </Slider>
-          </div>
+
+  return (
+    <section className="section-block" id="opensource">
+      <div className="projects-header-row">
+        <div className="section-header projects-section-header">
+          <span className="section-eyebrow">02 / Selected Work</span>
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">
+            Pinned repositories from GitHub showcasing backend APIs, fullstack web
+            systems, and mobile applications.
+          </p>
+        </div>
+
+        {socialMediaLinks.github && (
           <Button
-            text={"More Projects"}
-            className="project-button"
+            text="All Repositories ↗"
             href={socialMediaLinks.github}
             newTab={true}
+            variant="secondary"
           />
-        </div>
-      </Suspense>
-    );
-  } else {
-    return <FailedLoading />;
-  }
+        )}
+      </div>
+
+      <div className="projects-bento-grid">
+        {repo.map((item, i) => {
+          if (!item || !item.node) {
+            return null;
+          }
+          return <GithubRepoCard key={item.node.id || i} repo={item} />;
+        })}
+      </div>
+    </section>
+  );
 }
